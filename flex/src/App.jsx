@@ -1,3 +1,28 @@
+import Cat from "./components/Cat";
+
 export default function App() {
-  return <h1 className="text-3xl font-bold underline">Skeleton</h1>;
+  return (
+    <div>
+      <div className="flex h64 p-4 m-4 border-2 blue-400">
+        <Cat />
+        <Cat />
+        <Cat />
+      </div>
+      <div className="flex h64 p-4 m-4 border-2 blue-400">
+        <Cat />
+        <Cat />
+        <Cat />
+      </div>
+      <div className="flex h64 p-4 m-4 border-2 blue-400">
+        <Cat />
+        <Cat />
+        <Cat />
+      </div>
+      <div className="flex h64 p-4 m-4 border-2 blue-400">
+        <Cat />
+        <Cat />
+        <Cat />
+      </div>
+    </div>
+  );
 }
