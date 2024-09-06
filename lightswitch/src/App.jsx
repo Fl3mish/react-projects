@@ -1,3 +1,9 @@
+import LightSwitch from "./components/LightSwitch";
+
 export default function App() {
-  return <h1 className="text-3xl font-bold underline">lightswitch</h1>;
+  return (
+    <>
+      <LightSwitch />
+    </>
+  );
 }
