@@ -2,13 +2,17 @@ import { useState } from "react";
 
 const App = () => {
   const [numBlocks, setNumBlocks] = useState(4);
-  const blocks = [];
+  // const blocks = [];
 
-  for (let i = 0; i < numBlocks; i++) {
-    blocks.push(
-      <div key={i} className="bg-green-400 w-28 h-8 mb-2 rounded-sm"></div>
-    );
-  }
+  // for (let i = 0; i < numBlocks; i++) {
+  //   blocks.push(
+  //     <div key={i} className="bg-green-400 w-28 h-8 mb-2 rounded-sm"></div>
+  //   );
+  // }
+
+  const blocks = [...Array(numBlocks)].map((_, i) => (
+    <div key={i} className="bg-green-400 w-28 h-8 mb-2 rounded-sm"></div>
+  ));
 
   return (
     <div className="flex flex-col items-center justify-end min-h-screen  border-8 border-red-900">
