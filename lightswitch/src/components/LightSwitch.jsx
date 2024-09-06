@@ -12,10 +12,10 @@ const LightSwitch = () => {
     >
       <button onClick={() => setIsOn(!isOn)}>
         <div
-          className={clsx("h-8 w-6", isOn ? "bg-slate-200" : "bg-slate-400")}
+          className={clsx("h-8 w-6", isOn ? "bg-slate-500" : "bg-slate-200")}
         ></div>
         <div
-          className={clsx("h-8 w-6", isOn ? "bg-slate-400" : "bg-slate-200")}
+          className={clsx("h-8 w-6", isOn ? "bg-slate-200" : "bg-slate-500")}
         ></div>
       </button>
     </div>
