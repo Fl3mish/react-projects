@@ -1,22 +1,11 @@
 const testimonials = [
   {
-    name: "Alice Johnson",
-    portrait: "https://images.unsplash.com/photo-1603415526960-fbdb2c0a1e92",
-    rating: 5,
-    text: "The AI auto has completely transformed my commute! It's smooth, intuitive, and gives me peace of mind on every trip.",
-  },
-  {
     name: "Michael Brown",
     portrait: "https://images.unsplash.com/photo-1580489944761-15a19d654956",
     rating: 4,
     text: "I love the self-driving features. It feels like the future is finally here! A few bugs, but nothing that affects the ride much.",
   },
-  {
-    name: "Sophia Martinez",
-    portrait: "https://images.unsplash.com/photo-1545504534-64d79c3aeb59",
-    rating: 5,
-    text: "The AI learning features make it seem like the car knows me better than I know myself. A fantastic purchase!",
-  },
+
   {
     name: "James Lee",
     portrait: "https://images.unsplash.com/photo-1517841905240-472988babdf9",
