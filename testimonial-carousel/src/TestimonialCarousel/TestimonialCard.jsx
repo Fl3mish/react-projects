@@ -6,7 +6,7 @@ const TestimonialCard = (props) => {
       <div className="flex flex-col bg-gradient-to-r from-orange-300 to-red-500 items-center py-4 rounded-t-lg">
         <img
           src={portrait}
-          className="w-24 h-24 object-cover rounded-full border-2 border-black"
+          className="w-24 h-24 object-cover rounded-full border-2 border-black my-2"
         />
         <div className="text-xl text-white">{name}</div>
       </div>
