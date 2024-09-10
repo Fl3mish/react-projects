@@ -1,5 +1,6 @@
 import { useState } from "react";
 import StateInfo from "./StateInfo";
+import ErrorMessage from "./ErrorMessage";
 
 const API_BASE_URL =
   "https://api.react-formula.com/learning-api/demos/states-project/states/";
@@ -7,13 +8,20 @@ const API_BASE_URL =
 const App = () => {
   const [text, setText] = useState("");
   const [state, setState] = useState(null);
+  const [error, setError] = useState(null);
 
   const fetchState = async () => {
     const response = await fetch(`${API_BASE_URL}${text}`);
-    const data = await response.json();
-    setState(data);
+    if (response.status === 200) {
+      const data = await response.json();
+      setState(data);
+      setError(null);
+    } else {
+      const errorData = await response.json();
+      setState(null);
+      setError(errorData);
+    }
   };
-  console.log(state);
 
   return (
     <div className="flex justify-center p-8">
@@ -22,6 +30,7 @@ const App = () => {
           onSubmit={(e) => {
             e.preventDefault();
             fetchState();
+            setText("");
           }}
           className="mb-20"
         >
@@ -37,6 +46,7 @@ const App = () => {
           </button>
         </form>
         {state && <StateInfo state={state} />}
+        {error && <ErrorMessage message={error} />}
       </div>
     </div>
   );
