@@ -3,17 +3,27 @@ import StockItems from "./StockItems";
 
 const App = () => {
   const [stocks, setStocks] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
-  const fetchStocks = () => {
-    fetch(
+  // const fetchStocks = () => {
+  //   fetch(
+  //     "https://api.react-formula.com/learning-api/demos/stocks-project/stocks"
+  //   )
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       setStocks(data);
+  //       setIsLoading(false);
+  //     });
+  // };
+
+  const fetchStocks = async () => {
+    setIsLoading(true);
+    const response = await fetch(
       "https://api.react-formula.com/learning-api/demos/stocks-project/stocks"
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        setStocks(data);
-        setIsLoading(false);
-      });
+    );
+    const data = await response.json();
+    setStocks(data);
+    setIsLoading(false);
   };
 
   useEffect(() => {
