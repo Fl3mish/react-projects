@@ -25,7 +25,7 @@ const App = () => {
   ));
 
   return (
-    <div className="flex justify-center bg-slate-100 h-full">
+    <div className="flex justify-center bg-slate-100">
       {isLoading ? (
         <div className="flex justify-center items-center min-h-screen">
           <i className="fa-solid fa-spinner animate-spin text-3xl text-blue-500"></i>
