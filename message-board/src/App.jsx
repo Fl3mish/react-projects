@@ -8,9 +8,7 @@ const App = () => {
   const [text, setText] = useState("");
 
   const fetchMessages = async () => {
-    const response = await fetch(
-      "https://jsonplaceholder.typicode.com/comments"
-    );
+    const response = await fetch("http://localhost:5000/messages");
     const data = await response.json();
     setMessages(data);
   };
@@ -19,15 +17,27 @@ const App = () => {
     fetchMessages();
   }, []);
 
-  const messageItems = messages
-    .slice(0, 5)
-    .map((message) => <MessageItem key={message.id} message={message} />);
+  const messageItems = messages.map((message) => (
+    <MessageItem key={message.id} message={message} />
+  ));
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    fetch("http://localhost:5000/messages", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email: username, body: text }),
+    }).then(() => {
+      fetchMessages();
+      setText("");
+    });
+  };
 
   return (
     <div className="flex justify-center">
       <div className="flex flex-col w-full max-w-xl">
         {messageItems}
-        <form className="text-center">
+        <form onSubmit={handleSubmit} className="text-center">
           <input
             type="text"
             value={username}
