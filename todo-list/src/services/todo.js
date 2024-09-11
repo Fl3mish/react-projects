@@ -12,3 +12,10 @@ export const deleteTodo = (todoId) =>
     method: "DELETE",
     headers: { "Content-Type": "application/json" },
   });
+
+export const editTodo = (todoId, body) =>
+  fetch(`http://localhost:5000/todos/${todoId}`, {
+    method: "PATCH",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(body),
+  });

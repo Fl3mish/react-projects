@@ -1,14 +1,9 @@
 {
   "todos": [
     {
-      "task": "feed the cats",
-      "complete": true,
+      "task": "feed the cats!! yeeee",
+      "complete": false,
       "id": "6480"
-    },
-    {
-      "task": "buy some milk",
-      "complete": true,
-      "id": "4b2e"
     },
     {
       "task": "learn react",
@@ -16,19 +11,9 @@
       "id": "4e31"
     },
     {
-      "task": "do stuff",
-      "complete": false,
+      "task": "do stuff, hihi",
+      "complete": true,
       "id": "f482"
-    },
-    {
-      "id": "a5ad",
-      "task": "drink water",
-      "completed": false
-    },
-    {
-      "id": "1677",
-      "task": "watch movie",
-      "completed": false
     }
   ]
 }
