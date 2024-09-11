@@ -26,58 +26,8 @@
       "completed": false
     },
     {
-      "id": "c7d9",
-      "task": "test",
-      "completed": false
-    },
-    {
-      "id": "2e10",
-      "task": "something else",
-      "completed": false
-    },
-    {
       "id": "1677",
       "task": "watch movie",
-      "completed": false
-    },
-    {
-      "id": "1668",
-      "task": "watch tutorial",
-      "completed": false
-    },
-    {
-      "id": "63b3",
-      "task": "follow",
-      "completed": false
-    },
-    {
-      "id": "ca55",
-      "task": "test",
-      "completed": false
-    },
-    {
-      "id": "8816",
-      "task": "refresh",
-      "completed": false
-    },
-    {
-      "id": "8bf1",
-      "task": "another test",
-      "completed": false
-    },
-    {
-      "id": "5300",
-      "task": "test test",
-      "completed": false
-    },
-    {
-      "id": "050b",
-      "task": "hihihi",
-      "completed": false
-    },
-    {
-      "id": "05ef",
-      "task": "another test",
       "completed": false
     }
   ]

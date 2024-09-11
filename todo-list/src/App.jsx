@@ -18,7 +18,9 @@ const App = () => {
     fetchTodos();
   }, []);
 
-  const todoItems = todos.map((todo) => <TodoItem key={todo.id} todo={todo} />);
+  const todoItems = todos.map((todo) => (
+    <TodoItem key={todo.id} todo={todo} fetchTodos={fetchTodos} />
+  ));
 
   return (
     <div className="flex justify-center items-start min-h-screen bg-gradient-to-br from-blue-600 to-green-300">
