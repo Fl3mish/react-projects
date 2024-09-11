@@ -24,7 +24,7 @@ const TodoItem = (props) => {
           {editing ? (
             <form
               onSubmit={async () => {
-                const newTodo = { ...todo, task: editText };
+                const newTodo = { task: editText };
                 await TodoServices.editTodo(todo.id, newTodo);
                 await fetchTodos();
                 setEditing(false);
