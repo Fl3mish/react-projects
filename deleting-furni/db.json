@@ -1,28 +1,22 @@
 {
   "furniture": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Sleek Sofa",
       "description": "A modern sofa with clean lines and comfortable cusions.",
-      "image": "https://placehold.co/600x400?text=Sleek+Sofa"
+      "image": "https://placehold.co/600x600?text=Furniture"
     },
     {
-      "id": 2,
-      "name": "Cozy Bedside Table",
-      "description": "A compact bedside table perfect for keeping your essentials within reach.",
-      "image": "https://placehold.co/600x400?text=Cozy+Bedside+Table"
-    },
-    {
-      "id": 3,
+      "id": "3",
       "name": "Rustic Dining Chair",
       "description": "A sturdy dining chair crafted from reclaimed wood for a rustic look",
-      "image": "https://placehold.co/600x400?text=Rustic+Dining+Chair"
+      "image": "https://placehold.co/600x600?text=Furniture"
     },
     {
       "id": 4,
       "name": "Modern Desk",
       "description": "A minimalist desk with ample storage space for a cluter-free workspace.",
-      "image": "https://placehold.co/600x400?text=Modern+Desk"
+      "image": "https://placehold.co/600x600?text=Furniture"
     }
   ]
 }
