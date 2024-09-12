@@ -1,10 +1,13 @@
 import logo from "../assets/logo.png";
+import { Link } from "react-router-dom";
 
 const SignInPage = () => {
   return (
     <div className="flex flex-col items-center justify-center bg-amber-50  min-h-screen font-opensans">
       <div className="flex flex-col items-center">
-        <img src={logo} alt="cat logo" className="w-32" />
+        <Link to={"/"}>
+          <img src={logo} alt="cat logo" className="w-32" />
+        </Link>
         <div className="mt-2 text-3xl text-green-800 font-bubblegum">
           Carl's Cat Sitters
         </div>
