@@ -4,7 +4,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        tiny: ["Tiny5"],
+        ubuntu: ["Ubuntu"],
+        roboto: ["Roboto"],
       },
     },
   },
