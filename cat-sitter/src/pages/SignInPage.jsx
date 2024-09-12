@@ -1,19 +1,24 @@
-import signin from "../assets/signin.png";
+import logo from "../assets/logo.png";
 
 const SignInPage = () => {
   return (
-    <div className="flex flex-col items-center bg-amber-50  min-h-screen ">
-      <img src={signin} alt="cat logo" className="mb-8 mt-16" />
-      <form className="flex flex-col">
+    <div className="flex flex-col items-center justify-center bg-amber-50  min-h-screen font-opensans">
+      <div className="flex flex-col items-center">
+        <img src={logo} alt="cat logo" className="w-32" />
+        <div className="mt-2 text-3xl text-green-800 font-bubblegum">
+          Carl's Cat Sitters
+        </div>
+      </div>
+      <form className="flex flex-col m-8">
         <input
           type="text"
           placeholder="username"
-          className="p-2 rounded-md bg-amber-100 my-2"
+          className="px-4 py-2 my-3 rounded-md bg-amber-900/20 placeholder:amber-900/40 text-amber-800"
         />
         <input
           type="password"
           placeholder="password"
-          className="p-2 rounded-md bg-amber-100 my-2"
+          className="px-4 py-2 my-3 rounded-md bg-amber-900/20 placeholder:amber-900/40 text-amber-800"
         />
       </form>
     </div>
