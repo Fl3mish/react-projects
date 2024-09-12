@@ -1,10 +1,9 @@
+import HeroSection from "./HeroSection";
+
 const App = () => {
   return (
-    <div
-      className="font-roboto
-     bg-red-500 sm:bg-blue-400 md:bg-orange-400 lg:bg-violet-300 h-screen flex justify-center items-center text-4xl"
-    >
-      hello
+    <div className="font-roboto">
+      <HeroSection />
     </div>
   );
 };
