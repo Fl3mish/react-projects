@@ -1,6 +1,6 @@
 const App = () => {
   return (
-    <div className="bg-yellow-100 text-blue-500 h-screen flex justify-center items-center text-4xl">
+    <div className="font-tiny bg-red-500 sm:bg-blue-400 md:bg-orange-400 lg:bg-violet-300 h-screen flex justify-center items-center text-4xl">
       hello
     </div>
   );
