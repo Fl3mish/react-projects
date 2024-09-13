@@ -1,6 +1,15 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import SignInPage from "./pages/auth/SignInPage";
+import SignUpPage from "./pages/auth/SignUpPage";
+
 const App = () => {
   return (
-    <div className="text-green-600 flex flex-col justify-center items-center h-screen text-4xl"></div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<SignInPage />} />
+        <Route path="/sign-up" element={<SignUpPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 export default App;
