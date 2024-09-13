@@ -2,7 +2,7 @@ import { useState } from "react";
 import Field from "./Field";
 
 const AuthForm = (props) => {
-  const { fields, submitButtonLabel } = props;
+  const { fields, submitButtonLabel, onSubmit } = props;
   const [values, setValues] = useState(() => {
     const initialState = {};
     {
@@ -12,9 +12,18 @@ const AuthForm = (props) => {
       return initialState;
     }
   });
+  const [loading, setLoading] = useState(false);
 
   return (
-    <form className="m-4 rounded-lg border border-slate-200 bg-white p-4 font-lato">
+    <form
+      onSubmit={async (e) => {
+        e.preventDefault();
+        setLoading(true);
+        await onSubmit(values);
+        setLoading(false);
+      }}
+      className="m-4 rounded-lg border border-slate-200 bg-white p-4 font-lato"
+    >
       {fields.map((field) => (
         <Field
           key={field.label}
@@ -26,8 +35,13 @@ const AuthForm = (props) => {
           }
         />
       ))}
-      <button className="mt-4 w-full rounded-lg bg-emerald-700 py-2 text-white">
+      <button className="relative mt-4 w-full rounded-lg bg-emerald-700 py-2 text-white">
         {submitButtonLabel}
+        {loading && (
+          <div className="absolute right-4 top-0 flex h-full items-center">
+            <i className="fa-solid fa-spinner animate-spin text-xl text-green-300"></i>
+          </div>
+        )}
       </button>
     </form>
   );
