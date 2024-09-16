@@ -9,6 +9,7 @@ const SignUpPage = () => {
           { label: "password", type: "password" },
           { label: "confirmPassword", type: "password" },
         ]}
+        buttonLabel="Sign Up"
       />
     </div>
   );

@@ -8,6 +8,7 @@ const SignInPage = () => {
           { label: "username", type: "string" },
           { label: "password", type: "password" },
         ]}
+        buttonLabel="Sign In"
       />
     </div>
   );
