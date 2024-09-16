@@ -1,8 +1,10 @@
+import { Link } from "react-router-dom";
 import Form from "./Form";
+import Layout from "./Layout";
 
 const SignInPage = () => {
   return (
-    <div className="font-lato flex justify-center items-center">
+    <Layout>
       <Form
         fields={[
           { label: "username", type: "string" },
@@ -10,7 +12,10 @@ const SignInPage = () => {
         ]}
         buttonLabel="Sign In"
       />
-    </div>
+      <Link to={"/sign-up"} className="text-sm text-green-600 underline">
+        create an account
+      </Link>
+    </Layout>
   );
 };
 export default SignInPage;
