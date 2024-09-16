@@ -18,7 +18,7 @@ const Form = (props) => {
         <FormField
           key={field.label}
           field={field}
-          values={values}
+          values={values[field.label]}
           onChange={(e) =>
             setValues({ ...values, [field.label]: e.target.value })
           }
