@@ -2,7 +2,7 @@ import { useState } from "react";
 import FormField from "./FormField";
 
 const Form = (props) => {
-  const { fields, buttonLabel } = props;
+  const { fields, buttonLabel, onSubmit } = props;
   const [values, setValues] = useState(() =>
     fields.reduce((acc, field) => {
       acc[field.label] = "";
@@ -10,10 +10,14 @@ const Form = (props) => {
     }, {})
   );
 
-  console.log(values);
-
   return (
-    <form className="bg-white border border-slate-200 rounded-lg m-4 p-4">
+    <form
+      onSubmit={(e) => {
+        e.preventDefault();
+        onSubmit(values);
+      }}
+      className="bg-white border border-slate-200 rounded-lg m-4 p-4"
+    >
       {fields.map((field) => (
         <FormField
           key={field.label}

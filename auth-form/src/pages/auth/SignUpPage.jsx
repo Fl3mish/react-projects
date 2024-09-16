@@ -12,6 +12,9 @@ const SignUpPage = () => {
           { label: "confirmPassword", type: "password" },
         ]}
         buttonLabel="Sign Up"
+        onSubmit={(values) => {
+          console.log(values);
+        }}
       />
       <Link to={"/sign-up"} className="text-sm text-green-600 underline">
         sign in

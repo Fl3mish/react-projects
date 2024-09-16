@@ -1,0 +1,22 @@
+# Register
+POST http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+  "username": "hihi",
+  "password": "test123"
+}
+
+###
+
+# Login
+POST http://localhost:3000/api/users/session
+Content-Type: application/json
+
+{
+  "username": "mario",
+  "password": "test123"
+}
+
+
+###
