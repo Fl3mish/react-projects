@@ -5,7 +5,7 @@ const apiFetch = (method, path, body = null) => {
     method,
     credentials: "include",
     headers: {
-      Authorization: "Bearer " + VITE_API_KEY,
+      // Authorization: "Bearer " + VITE_API_KEY,
       "Content-Type": "application/json",
     },
   };

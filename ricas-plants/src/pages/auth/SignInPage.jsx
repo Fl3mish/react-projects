@@ -29,11 +29,12 @@ const SignInPage = () => {
             password: values.password,
           });
           // Server response handling
+          const data = await response.json();
           if (response.status === 201) {
+            // console.log("token " + data);
             console.log("Sign in succesfull");
             setError("");
           } else {
-            const data = await response.json();
             setError(data.error);
             console.log("sign in unsuccesfull");
           }
