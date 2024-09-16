@@ -1,7 +1,15 @@
+import Form from "./Form";
+
 const SignUpPage = () => {
   return (
-    <div className="bg-yellow-100 text-blue-500 h-screen flex justify-center items-center text-4xl">
-      SignUpPage
+    <div className="font-lato flex justify-center items-center ">
+      <Form
+        fields={[
+          { label: "username", type: "string" },
+          { label: "password", type: "password" },
+          { label: "confirmPassword", type: "password" },
+        ]}
+      />
     </div>
   );
 };

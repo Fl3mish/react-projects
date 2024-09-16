@@ -1,7 +1,14 @@
+import Form from "./Form";
+
 const SignInPage = () => {
   return (
-    <div className="bg-yellow-100 text-blue-500 h-screen flex justify-center items-center text-4xl">
-      SignInPage
+    <div className="font-lato flex justify-center items-center">
+      <Form
+        fields={[
+          { label: "username", type: "string" },
+          { label: "password", type: "password" },
+        ]}
+      />
     </div>
   );
 };
