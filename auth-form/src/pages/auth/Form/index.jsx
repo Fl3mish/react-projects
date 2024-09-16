@@ -19,7 +19,9 @@ const Form = (props) => {
           key={field.label}
           field={field}
           values={values}
-          setValues={setValues}
+          onChange={(e) =>
+            setValues({ ...values, [field.label]: e.target.value })
+          }
         />
       ))}
       <button className="w-full py-2 mt-4 rounded-lg bg-emerald-700 text-white">
