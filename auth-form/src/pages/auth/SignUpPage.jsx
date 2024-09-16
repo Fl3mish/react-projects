@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Form from "./Form";
 import Layout from "./Layout";
 import { useState } from "react";
-import { createUser } from "../../services/user";
+import { createUser } from "services/user";
 
 const SignUpPage = () => {
   const [error, setError] = useState("");
