@@ -2,15 +2,19 @@ import { Link } from "react-router-dom";
 import Form from "./Form";
 import Layout from "./Layout";
 import { useState } from "react";
+import { createUser } from "../../services/user";
 
 const SignUpPage = () => {
   const [error, setError] = useState("");
 
   return (
     <Layout>
-      <div className="bg-red-200 text-red-700 px-4 py-2 mt-2 rounded-lg">
-        {error.msg}
-      </div>
+      {error && (
+        <div className="bg-red-200 text-red-700 px-4 py-2 mt-2 rounded-lg  duration-100">
+          {error.msg}
+        </div>
+      )}
+
       <Form
         fields={[
           { label: "username", type: "string" },
@@ -18,7 +22,7 @@ const SignUpPage = () => {
           { label: "confirmPassword", type: "password" },
         ]}
         buttonLabel="Sign Up"
-        onSubmit={(values) => {
+        onSubmit={async (values) => {
           if (values.username.length < 4) {
             setError({ msg: "username too short" });
             return;
@@ -33,6 +37,19 @@ const SignUpPage = () => {
           }
 
           //   Make Request
+          const response = await createUser({
+            username: values.username,
+            password: values.password,
+          });
+          console.log(response);
+          if (response.status === 201) {
+            setError("");
+            console.log("user created");
+          } else {
+            const data = await response.json();
+            setError(data);
+            return;
+          }
         }}
       />
       <Link to={"/sign-up"} className="text-sm text-green-600 underline">
