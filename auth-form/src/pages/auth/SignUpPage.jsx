@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Form from "./Form";
 import Layout from "./Layout";
 import { useState } from "react";
@@ -6,6 +6,8 @@ import { createUser } from "services/user";
 
 const SignUpPage = () => {
   const [error, setError] = useState("");
+
+  const navigate = useNavigate();
 
   return (
     <Layout>
@@ -44,7 +46,9 @@ const SignUpPage = () => {
           console.log(response);
           if (response.status === 201) {
             setError("");
+            navigate("/", { state: { accountCreated: true } });
             console.log("user created");
+            return;
           } else {
             const data = await response.json();
             setError(data);
@@ -52,7 +56,7 @@ const SignUpPage = () => {
           }
         }}
       />
-      <Link to={"/sign-up"} className="text-sm text-green-600 underline">
+      <Link to={"/"} className="text-sm text-green-600 underline">
         sign in
       </Link>
     </Layout>
