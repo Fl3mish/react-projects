@@ -44,11 +44,12 @@ const SignInPage = () => {
           });
           console.log(response);
 
+          const data = await response.json();
+          console.log(data);
           if (response.status === 200) {
             setError("");
             console.log("Succesfully signed in");
           } else {
-            const data = await response.json();
             setError(data);
           }
         }}
