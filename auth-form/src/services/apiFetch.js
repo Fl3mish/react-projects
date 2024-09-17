@@ -1,3 +1,5 @@
+import { getTokenSessionStorage } from "./user";
+
 const { VITE_API_BASE_URL } = import.meta.env;
 
 const apiFetch = (method, path, body = null) => {
@@ -5,7 +7,7 @@ const apiFetch = (method, path, body = null) => {
     method,
     credentials: "include",
     headers: {
-      Authorization: "Bearer ",
+      Authorization: `Bearer ${getTokenSessionStorage()}`,
       "Content-Type": "application/json",
     },
   };
