@@ -1,4 +1,10 @@
+import NavBar from "shared/NavBar";
+
 const PlantListPage = () => {
-  return <div>PlantListPage</div>;
+  return (
+    <div>
+      <NavBar />
+    </div>
+  );
 };
 export default PlantListPage;
