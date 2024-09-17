@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import Form from "./Form";
 import Layout from "./Layout";
-import { createSession } from "services/user";
+import { createSession, setTokenSessionStorage } from "services/user";
 import { useState } from "react";
 
 const SignInPage = () => {
@@ -47,6 +47,7 @@ const SignInPage = () => {
           const data = await response.json();
           console.log(data);
           if (response.status === 200) {
+            setTokenSessionStorage(data.token);
             setError("");
             console.log("Succesfully signed in");
           } else {
